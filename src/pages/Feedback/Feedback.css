@@ -1,0 +1,202 @@
+/* ============================================
+   FEEDBACK STYLES - Modern Finance App
+   ============================================ */
+
+.feedback-page {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.feedback-page h1 {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.feedback-page h1::before {
+  content: '💬';
+  font-size: var(--text-3xl);
+  filter: none;
+  -webkit-text-fill-color: initial;
+}
+
+.page-description {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+.feedback-form {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+  backdrop-filter: blur(10px);
+  padding: var(--space-8);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all var(--transition-base);
+}
+
+.feedback-form:hover {
+  box-shadow: var(--shadow-2xl);
+}
+
+.form-group {
+  margin-bottom: var(--space-6);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: var(--space-4) var(--space-5);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-base);
+  font-family: var(--font-sans);
+  transition: all var(--transition-base);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.form-group input[type="text"]:hover,
+.form-group textarea:hover,
+.form-group select:hover {
+  border-color: var(--border-dark);
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-bg);
+  transform: translateY(-2px);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 180px;
+  line-height: 1.6;
+}
+
+.form-group input[type="file"] {
+  padding: var(--space-4);
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  background: var(--gray-50);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.form-group input[type="file"]:hover {
+  border-color: var(--primary);
+  background: var(--primary-bg);
+}
+
+.form-group small {
+  display: block;
+  margin-top: var(--space-2);
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+}
+
+.attachment-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-3);
+  padding: var(--space-4);
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border-color);
+  transition: all var(--transition-base);
+}
+
+.attachment-preview:hover {
+  background: var(--bg-primary);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.remove-attachment {
+  background: var(--danger-bg);
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  font-size: var(--text-xl);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.remove-attachment:hover {
+  background: var(--danger);
+  color: var(--text-inverse);
+  transform: scale(1.1) rotate(90deg);
+}
+
+.form-actions {
+  margin-top: var(--space-8);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding-top: var(--space-6);
+  border-top: 2px solid var(--border-light);
+}
+
+.success-message {
+  padding: var(--space-5);
+  background: linear-gradient(135deg, var(--success-bg) 0%, #d1fae5 100%);
+  color: #065f46;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+  border-left: 6px solid var(--success);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-weight: var(--font-medium);
+}
+
+.success-message::before {
+  content: '✓';
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+}
+
+@media (max-width: 768px) {
+  .feedback-form {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,155 @@
+.comparative-analysis {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.analysis-header {
+  margin-bottom: 2rem;
+}
+
+.analysis-header h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.analysis-type-selector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.analysis-type-selector button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.analysis-type-selector button:hover {
+  background: #f5f5f5;
+}
+
+.analysis-type-selector button.active {
+  background: #2196F3;
+  color: #fff;
+  border-color: #2196F3;
+}
+
+.analysis-comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.period-column h4,
+.variance-column h4 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  text-align: center;
+}
+
+.period-stats,
+.variance-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: #F5F5F5;
+  border-radius: 4px;
+}
+
+.stat-row.income {
+  border-left: 4px solid #4CAF50;
+}
+
+.stat-row.expense {
+  border-left: 4px solid #F44336;
+}
+
+.stat-row.net {
+  border-left: 4px solid #2196F3;
+  font-weight: bold;
+}
+
+.variance-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.variance-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.variance-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.variance-amount {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: normal;
+}
+
+.analysis-insights {
+  background: #E3F2FD;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.analysis-insights h4 {
+  margin: 0 0 1rem 0;
+  color: #1976D2;
+}
+
+.analysis-insights ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.analysis-insights li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .analysis-comparison {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .variance-column {
+    order: 3;
+  }
+
+  .period-column:last-child {
+    order: 2;
+  }
+
+  .analysis-type-selector {
+    flex-direction: column;
+  }
+
+  .analysis-type-selector button {
+    width: 100%;
+  }
+}
+
